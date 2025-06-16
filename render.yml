@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: stripe
+    name: flask-stripe-checker
     env: python
+    buildCommand: ""
+    startCommand: python app.py
     plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn stripe:app --bind 0.0.0.0:$PORT
     autoDeploy: true
